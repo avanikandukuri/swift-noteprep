@@ -1,0 +1,92 @@
+.main-content {
+	padding: 10%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.p-4 {
+	padding: 4%;
+}
+
+.swift-card {
+	padding: 4% 4%;
+	background: aliceblue;
+	border-radius: 10px;
+	margin: 4% 0%;
+	position: relative;
+	text-align: left;
+}
+
+.form-input {
+	border: 2px grey solid;
+	width: 70%;
+	padding: 10px;
+	border-radius: 6px;
+	margin: 10px 10px;
+}
+
+button.modal-btn {
+	padding: 10px 20px;
+	border-radius: 4px;
+	background: #eaeaea;
+	border: 1px grey solid;
+	margin: 2% 4%;
+}
+
+.add-btn {
+	padding: 10px 20px;
+	border-radius: 4px;
+	background: #eaeaea;
+	border: 1px grey solid;
+	margin: 2% 4%;
+}
+
+.card-title {
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.card-btn {
+	position: absolute;
+	top: 6%;
+	right: 3%;
+	border-radius: 50px;
+	border: 1px solid #c1c1c1;
+	padding: 4px 8px 5px 10px;
+}
+
+/* modal */
+
+.modal-backdrop {
+	display: none;
+	background: grey;
+	height: 100vh;
+	opacity: 0.6;
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	transition: all ease-in-out 1s;
+
+	&.show {
+		display: block;
+	}
+}
+
+.modal {
+	display: none;
+	position: absolute;
+	top: 0%;
+	width: 80%;
+	background: white;
+	margin: auto 6%;
+	border-radius: 13px;
+	padding: 4%;
+	margin-top: 40%;
+	transition: all ease-in-out 1s;
+
+	&.show {
+		display: block;
+	}
+}

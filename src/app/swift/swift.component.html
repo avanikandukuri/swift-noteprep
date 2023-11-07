@@ -1,0 +1,30 @@
+<div class="p-4 text-center">
+	<!-- <h4>List of swifts</h4> -->
+	<div class="p-4">
+		<div class="swift-card" *ngFor="let swift of swifts" (click)="editSwift(swift)">
+			<div class="card-title">{{ swift.title }}</div>
+			<div class="card-body">
+				<div class="note-item" *ngFor="let item of swift.content">
+					<span class="note">{{ item }}</span>
+				</div>
+				<button class="card-btn" (click)="deleteSwift(swift)">x</button>
+			</div>
+		</div>
+	</div>
+	<div *ngIf="!showForm">
+		<button class="add-btn" (click)="showFormDetails()">Add Swift</button>
+	</div>
+</div>
+<div class="modal-backdrop" [class.show]="showForm"></div>
+<div class="modal" [class.show]="showForm">
+	<div class="text-center">
+		<h3 *ngIf="addForm">Add details</h3>
+		<h3 *ngIf="editForm">Edit details</h3>
+		<input class="form-input" type="text" placeholder="Title" [(ngModel)]="newSwift.title">
+		<br>
+		<textarea class="form-input" placeholder="Content" [(ngModel)]="newSwift.content"></textarea>
+		<br>
+		<button class="modal-btn" *ngIf="editForm || addForm" (click)="cancelSwift()">Cancel</button>
+		<button class="modal-btn" *ngIf="editForm || addForm" (click)="addSwift()">Save</button>
+	</div>
+</div>
